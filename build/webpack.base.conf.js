@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
-  dist: path.join(__dirname, '../public'),
+  dist: path.join(__dirname, '../dist'),
   assets: 'assets/'
 
 }
@@ -20,7 +20,7 @@ module.exports = {
   },
     //точка входа
   entry: {
-      app: PATHS.src
+      app: ['babel-polyfill',PATHS.src]
   },
 
   //куда складывает
